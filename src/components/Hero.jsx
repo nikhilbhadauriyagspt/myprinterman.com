@@ -103,7 +103,7 @@ export default function Hero() {
                   transition={{ delay: 0.1, duration: 0.4 }}
                 >
                    <div className="mb-8">
-                      <h1 className="text-5xl md:text-6xl lg:text-8xl font-black text-white leading-[0.9] tracking-tight flex flex-col">
+                      <h1 className="text-5xl md:text-6xl lg:text-8xl font-black text-white leading-[0.9]  flex flex-col">
                         <span className="capitalize">
                           {slides[current].title.toLowerCase()}
                         </span>
@@ -117,7 +117,7 @@ export default function Hero() {
                    </div>
 
                    <div className="max-w-xl mb-10">
-                      <p className="text-white text-lg md:text-xl font-bold leading-tight mb-2 tracking-tight">
+                      <p className="text-white text-lg md:text-xl font-bold leading-tight mb-2 ">
                          Better results for your business.
                       </p>
                       <p className="text-white/70 text-sm md:text-base font-medium leading-relaxed border-l-2 border-white/20 pl-6">

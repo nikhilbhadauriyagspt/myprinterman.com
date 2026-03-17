@@ -81,7 +81,7 @@ export default function About() {
                   MyPrinterMan is dedicated to your business success.
                 </p>
                 <p className="text-sm font-medium text-slate-500 leading-relaxed border-l-2 border-slate-200 pl-6">
-                  We believe in equipment that works perfectly. We partner with top brands to offer reliable products backed by expert support.
+                  We deliver top brands with reliable products backed by expert guide.
                 </p>
              </div>
           </div>
