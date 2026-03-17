@@ -1,7 +1,7 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { CartProvider } from './context/CartContext';
 import { PayPalScriptProvider } from "@paypal/react-paypal-js";
-// import Header from './components/Header';
+import Header from './components/Header';
 import Footer from './components/Footer';
 import Toast from './components/Toast';
 import CartDrawer from './components/CartDrawer';
@@ -37,15 +37,20 @@ import NewsletterManager from './pages/admin/NewsletterManager';
 import UserManager from './pages/admin/UserManager';
 
 // Layout wrapper for customer-facing pages
-const ShopLayout = ({ children }) => (
-  <div className="bg-white min-h-screen flex flex-col">
-    {/* <Header /> */}
-    <main className="flex-grow">
-      {children}
-    </main>
-    <Footer />
-  </div>
-);
+const ShopLayout = ({ children }) => {
+  const location = useLocation();
+  const isHome = location.pathname === '/';
+
+  return (
+    <div className="bg-white min-h-screen flex flex-col">
+      {!isHome && <Header />}
+      <main className="flex-grow">
+        {children}
+      </main>
+      <Footer />
+    </div>
+  );
+};
 
 function App() {
   const paypalOptions = {
