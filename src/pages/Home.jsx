@@ -4,7 +4,7 @@ import SEO from "@/components/SEO";
 import Features from "@/components/Features";
 import Collections from "@/components/Collections";
 import ShopByCategory from "@/components/ShopByCategory";
-import BrandShowcase from "@/components/BrandShowcase";
+// import BrandShowcase from "@/components/BrandShowcase";
 import ProductGrid from "@/components/ProductGrid";
 import CategorySlider from "@/components/CategorySlider";
 import BestSellers from "@/components/BestSellers";
@@ -94,7 +94,7 @@ export default function Home() {
       <ShopByCategory categories={data.categories} />
       <Collections />
       <BestSellers products={data.all} />
-      <BrandShowcase brands={data.brands} />
+      {/* <BrandShowcase brands={data.brands} /> */}
       <ProductGrid products={data.mixedArrivals.slice(0, 30)} />
 
       <CategorySlider 
